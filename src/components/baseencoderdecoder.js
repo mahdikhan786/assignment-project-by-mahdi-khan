@@ -41,7 +41,7 @@ export default class Baseencoderdecoder extends React.Component {
   render() {
     return (
       <div>
-      <h2>Baseencoderdecoder </h2>
+      <h2>Base64 Encoder Decoder </h2>
         <p>Submit your code below</p> <br />
         <textarea
           className="text"
