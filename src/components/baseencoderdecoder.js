@@ -61,7 +61,7 @@ export default class Baseencoderdecoder extends React.Component {
         <br />
         <button onClick={e => this.finalRender(e, 'encode')}>encode</button>
         <button onClick={e => this.finalRender(e, 'decode')}>decode</button>
-        <pre style={{textAlign:"start"}} className="encoder-decoder-final" ></pre>
+        <pre  className="encoder-decoder-final" ></pre>
       </div>
     );
   }

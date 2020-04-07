@@ -1,12 +1,14 @@
 import React from "react";
-import JSONFormatter from "json-formatter-js";
+// import JSONFormatter from "json-formatter-js";
 
 export default class Jsontools extends React.Component {
   constructor(props) {
     super(props);
     this.state = { fileData: "", textData: "" };
   }
-  change() {
+  change(e) {
+    e.preventDefault(); 
+
     const file = document.querySelector(".json-file").files[0];
     const reader = new FileReader();
     var daata = "";
@@ -24,11 +26,11 @@ export default class Jsontools extends React.Component {
 
     let data = this.state.textData || this.state.fileData;
     try {
-      var formatter = new JSONFormatter(JSON.parse(data), 3);
+      // var formatter = new JSONFormatter(JSON.parse(data), 3);
     } catch (error) {
       document.querySelector(".json-formatter-final").innerHTML = `this ${error}`;
     }
-    document.querySelector(".json-formatter-final").appendChild(formatter.render());
+    document.querySelector(".json-formatter-final").innerHTML = 'working';
   }
   render() {
     return (

@@ -5,7 +5,9 @@ export default class Cssvalidator extends React.Component {
     super(props);
     this.state = { fileData: "", textData: "" };
   }
-  change() {
+  change(e) {
+    e.preventDefault(); 
+
     const file = document.querySelector(".file").files[0];
     const reader = new FileReader();
     var daata = "";

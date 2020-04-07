@@ -5,7 +5,9 @@ export default class Htmltools extends React.Component {
     super(props);
     this.state = { fileData: "", textData: "" };
   }
-  change() {
+  change(e) {
+    e.preventDefault(); 
+
     const file = document.querySelector(".html-file").files[0];
     console.log(file);
     const reader = new FileReader();

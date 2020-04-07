@@ -5,7 +5,9 @@ export default class Csstools extends React.Component {
     super(props);
     this.state = { fileData: "", textData: "" };
   }
-  change() {
+  change(e) {
+    e.preventDefault(); 
+
     const file = document.querySelector(".css-file").files[0];
     const reader = new FileReader();
     var daata = "";
